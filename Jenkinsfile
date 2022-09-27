@@ -77,6 +77,14 @@ sh "docker rmi $imagename:latest"
     
     
 }}
+        
+    stage('Deploy'){
+            steps {
+                 sh 'kubectl apply -f deployapp.yml'
+            }
+        }    
+        
+        
         } 
         
         
