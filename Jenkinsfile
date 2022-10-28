@@ -2,7 +2,7 @@
 pipeline {
     
     environment {
-    imagename = "srinu318/petclinics"
+    imagename = "srinu318/pet-clinics"
     registryCredential = 'Mydockercredentials'
     dockerImage = ''
   }
@@ -15,7 +15,7 @@ pipeline {
         stage('git') {
             steps {
                 echo 'clonning Repository'
-                git branch: 'main', url: 'https://github.com/mnagen/spring-petclinic.git'
+                git branch: 'main', https://github.com/srinu318/spring-petclinic.git'
                 
                 echo 'Repo clone successfully'
             }
