@@ -2,8 +2,8 @@
 pipeline {
     
     environment {
-    imagename = "becomedevops/petclinics"
-    registryCredential = 'mydockercredentials'
+    imagename = "srinu318/petclinics"
+    registryCredential = 'Mydockercredentials'
     dockerImage = ''
   }
     agent any
@@ -65,18 +65,7 @@ pipeline {
                 
                 
             }
-        
-        
-        
-        
-        
-        stage('Remove Unused docker image') {
-steps{
-sh "docker rmi $imagename:$BUILD_NUMBER"
-sh "docker rmi $imagename:latest"
-    
-    
-}}
+       
         
    
         
